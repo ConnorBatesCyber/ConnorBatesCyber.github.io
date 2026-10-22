@@ -195,19 +195,20 @@ main img {
 }
 
 /* Center Professional Interests List */
-
 #about ul {
-    width: fit-content;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
     margin: 20px auto;
     padding-left: 26px;
     text-align: left;
 }
 
 /* Keep Professional Interests Bullets Left-Aligned */
-
 #about li {
     text-align: left;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
 }
 
 /* Center and Underline About Page Headings */
@@ -403,19 +404,20 @@ main article > .action-link {
 }
 
 /* Align All Skills Lists Consistently */
-
 #skills ul {
     width: 100%;
     max-width: 500px;
+    box-sizing: border-box;
     margin: 20px auto;
     padding-left: 26px;
     text-align: left;
 }
 
 /* Keep All Skills Bullet Points Left-Aligned */
-
 #skills li {
     text-align: left;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
 }
 
 /* Center and Underline Skills Page Headings */
@@ -442,6 +444,12 @@ main article > .action-link {
     border-top: 4px solid #00aaff;
 }
 
+/* Center Technical Knowledge Introduction */
+#technical-knowledge > p,
+#knowledge > p {
+    text-align: center;
+}
+
 /* Center and Underline Technical Knowledge Heading */
 
 #technical-knowledge h2,
@@ -455,23 +463,24 @@ main article > .action-link {
     border-bottom: 2px solid #00aaff;
 }
 
-/* Underline Technical Knowledge Terms */
 
+/* Underline and Center Technical Knowledge Terms */
 #technical-knowledge dt,
 #knowledge dt {
     font-weight: bold;
+    text-align: center;
     width: fit-content;
     max-width: 100%;
-    margin-top: 1.5em;
+    margin: 1.5em auto 0;
     padding-bottom: 4px;
     border-bottom: 2px solid #00aaff;
 }
 
-/* Technical Knowledge Descriptions */
-
+/* Center Technical Knowledge Descriptions */
 #technical-knowledge dd,
 #knowledge dd {
-    margin: 0.5em 0 1em 1em;
+    text-align: center;
+    margin: 0.5em 0 1em;
     line-height: 1.6;
 }
 
