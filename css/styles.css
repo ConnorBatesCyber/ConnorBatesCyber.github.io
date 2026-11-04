@@ -53,7 +53,7 @@ img {
    ========================================== */
 
 header {
-    background-color: #10243a;
+    background: linear-gradient(to right, #10243a, #1b3a57);
     color: #ffffff;
     text-align: center;
     padding: 42px 20px 34px;
@@ -116,8 +116,14 @@ nav a:focus {
     color: #9be9f3;
 }
 
-/* Highlight Current Navigation Page */
+/* Active Navigation Link */
+nav a:active {
+    color: #ffffff;
+    background-color: #245779;
+    border-radius: 6px;
+}
 
+/* Highlight Current Navigation Page */
 nav a[aria-current="page"] {
     background-color: #116b94;
     color: #ffffff;
@@ -187,7 +193,6 @@ main img {
 }
 
 /* Center About Page Paragraphs */
-
 #about p {
     text-align: center;
     max-width: 900px;
@@ -212,7 +217,6 @@ main img {
 }
 
 /* Center and Underline About Page Headings */
-
 #about h1,
 #about h2,
 #about h3 {
@@ -232,7 +236,6 @@ main img {
    ========================================== */
 
 /* Shared Link Button Appearance */
-
 .action-link {
     box-sizing: border-box;
     display: inline-flex;
@@ -255,7 +258,6 @@ main img {
 }
 
 /* Link Button Hover and Focus */
-
 .action-link:hover,
 .action-link:focus {
     background-color: #084c70;
@@ -269,13 +271,11 @@ main img {
 }
 
 /* Center Buttons Inside Paragraphs */
-
 main p:has(> .action-link) {
     text-align: center;
 }
 
 /* Center Buttons Placed Directly in Cards */
-
 main section > .action-link,
 main article > .action-link {
     display: flex;
@@ -289,27 +289,23 @@ main article > .action-link {
    ========================================== */
 
 /* Homepage Welcome Section */
-
 #home > section:first-child {
     text-align: center;
 }
 
 /* Center Welcome Heading and Paragraphs */
-
 #home > section:first-child h2,
 #home > section:first-child p {
     text-align: center;
 }
 
 /* Keep Welcome Button Centered */
-
 #home > section:first-child .action-link {
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Homepage Responsive Grid */
-
 .home-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -319,7 +315,6 @@ main article > .action-link {
 }
 
 /* Homepage Cards */
-
 .home-grid .home-card {
     display: flex;
     flex-direction: column;
@@ -331,7 +326,6 @@ main article > .action-link {
 }
 
 /* Center and Underline Homepage Card Headings */
-
 .home-grid .home-card h2,
 .home-grid .home-card h3 {
     text-align: center;
@@ -345,13 +339,11 @@ main article > .action-link {
 }
 
 /* Center Homepage Card Paragraphs */
-
 .home-grid .home-card p {
     text-align: center;
 }
 
 /* Center Technical Skills List */
-
 .home-grid .home-card ul {
     width: fit-content;
     max-width: 100%;
@@ -362,7 +354,6 @@ main article > .action-link {
 }
 
 /* Align Card Buttons Along the Bottom */
-
 .home-grid .home-card p:has(> .action-link) {
     margin-top: auto;
     padding-top: 20px;
@@ -370,7 +361,6 @@ main article > .action-link {
 }
 
 /* Center and Standardize Card Buttons */
-
 .home-grid .home-card .action-link {
     display: inline-flex;
     align-items: center;
@@ -385,7 +375,6 @@ main article > .action-link {
 }
 
 /* Buttons Placed Directly Inside Cards */
-
 .home-grid .home-card > .action-link {
     margin-top: auto;
 }
@@ -396,7 +385,6 @@ main article > .action-link {
    ========================================== */
 
 /* Center Skills Page Paragraphs */
-
 #skills p {
     text-align: center;
     max-width: 900px;
@@ -421,7 +409,6 @@ main article > .action-link {
 }
 
 /* Center and Underline Skills Page Headings */
-
 #skills h1,
 #skills h2,
 #skills h3 {
@@ -436,7 +423,6 @@ main article > .action-link {
 }
 
 /* Technical Knowledge Section */
-
 #technical-knowledge,
 #knowledge {
     padding: 2em 1em;
@@ -451,7 +437,6 @@ main article > .action-link {
 }
 
 /* Center and Underline Technical Knowledge Heading */
-
 #technical-knowledge h2,
 #knowledge h2 {
     text-align: center;
@@ -489,8 +474,8 @@ main article > .action-link {
    ========================================== */
 
 /* Project Cards */
-
-#projects > section {
+#projects > article.project-card,
+#projects > aside.cyber-resources {
     background-color: #ffffff;
     border: 1px solid #dbe4ec;
     border-top: 4px solid #00aaff;
@@ -501,20 +486,27 @@ main article > .action-link {
 }
 
 /* Related Cybersecurity Resources */
+#projects > aside.cyber-resources {
+    background-color: #181a1b;
+    color: #d6eaff;
+    border: 1px solid #2b4358;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
 
-#projects > section:last-of-type {
-    border-top: 1px solid #dbe4ec;
+/* Cybersecurity Resources Heading */
+#projects > aside.cyber-resources h2,
+#projects > aside.cyber-resources h3 {
+    color: #9bd5ff;
 }
 
 /* Responsive Project Images */
-
 #projects img {
     max-width: 100%;
     height: auto;
 }
 
 /* Center Projects Page Introduction */
-
 #projects > p {
     max-width: 900px;
     margin: 12px auto;
@@ -522,8 +514,7 @@ main article > .action-link {
 }
 
 /* Center Project Descriptions and Image Captions */
-
-#projects section p,
+#projects article.project-card p,
 #projects figure figcaption,
 #projects .caption {
     max-width: 900px;
@@ -532,7 +523,6 @@ main article > .action-link {
 }
 
 /* Center Project Figures */
-
 #projects figure {
     max-width: 100%;
     margin: 20px auto;
@@ -540,8 +530,7 @@ main article > .action-link {
 }
 
 /* Center Project Images */
-
-#projects > section img {
+#projects > article.project-card img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -549,9 +538,8 @@ main article > .action-link {
 }
 
 /* Keep Project Lists Left-Aligned */
-
-#projects > section ul,
-#projects > section ol {
+#projects > article.project-card ul,
+#projects > article.project-card ol {
     width: fit-content;
     max-width: 100%;
     margin: 20px auto;
@@ -560,7 +548,6 @@ main article > .action-link {
 }
 
 /* Center and Underline Project Headings */
-
 #projects h1,
 #projects h2,
 #projects h3,
@@ -582,7 +569,6 @@ main article > .action-link {
    ========================================== */
 
 /* Center and Underline Resume Page Headings */
-
 #resume h1,
 #resume h2,
 #resume h3 {
@@ -597,7 +583,6 @@ main article > .action-link {
 }
 
 /* Center Resume Page Paragraphs */
-
 #resume p {
     max-width: 900px;
     margin: 12px auto;
@@ -605,7 +590,6 @@ main article > .action-link {
 }
 
 /* Align Resume Page Lists */
-
 #resume ul,
 #resume ol {
     width: 100%;
@@ -616,7 +600,6 @@ main article > .action-link {
 }
 
 /* Center Resume Page Buttons */
-
 #resume .action-link {
     margin-left: auto;
     margin-right: auto;
@@ -628,7 +611,6 @@ main article > .action-link {
    ========================================== */
 
 /* Center and Underline Contact Page Headings */
-
 #contact h1,
 #contact h2,
 #contact h3,
@@ -644,7 +626,6 @@ main article > .action-link {
 }
 
 /* Center Contact Page Paragraphs */
-
 #contact p {
     max-width: 900px;
     margin: 12px auto;
@@ -652,7 +633,6 @@ main article > .action-link {
 }
 
 /* Contact Page Link Buttons */
-
 #contact a {
     box-sizing: border-box;
     display: inline-flex;
@@ -674,13 +654,11 @@ main article > .action-link {
 }
 
 /* Center Contact Link Buttons */
-
 #contact p:has(> a) {
     text-align: center;
 }
 
 /* Contact Link Hover and Focus */
-
 #contact a:hover,
 #contact a:focus {
     background-color: #084c70;
@@ -693,7 +671,6 @@ main article > .action-link {
 }
 
 /* Location Section */
-
 #location {
     background-color: #ffffff;
     border: 1px solid #dbe4ec;
@@ -716,7 +693,6 @@ main article > .action-link {
 }
 
 /* Location Action Links */
-
 #location > a {
     box-sizing: border-box;
     display: inline-flex;
@@ -736,7 +712,6 @@ main article > .action-link {
 }
 
 /* Google Map */
-
 .map {
     display: block;
     width: 100%;
@@ -843,13 +818,11 @@ footer a:focus {
    ========================================== */
 
 /* Hidden by Default on Tablet and Desktop */
-
 .mobile {
     display: none;
 }
 
 /* Visible by Default on Tablet and Desktop */
-
 .tablet-desktop {
     display: block;
 }
@@ -884,9 +857,10 @@ footer a:focus {
         padding: 5px 8px;
     }
 
-    #projects > section,
+   #projects > article.project-card,
+    #projects > aside.cyber-resources,
     #location {
-        padding: 22px;
+    padding: 22px;
     }
 }
 
@@ -918,13 +892,8 @@ footer a:focus {
         margin: 18px auto;
     }
 
-    main section,
-    main article {
+    main section {
         padding: 18px;
-    }
-
-    main h2 {
-        font-size: 1.35rem;
     }
 
     nav {
@@ -945,7 +914,6 @@ footer a:focus {
     }
 
     /* Mobile Visibility */
-
     .mobile {
         display: block;
     }
@@ -955,14 +923,13 @@ footer a:focus {
     }
 
     /* Mobile Project and Location Cards */
-
-    #projects > section,
+    #projects > article.project-card,
+    #projects > aside.cyber-resources,
     #location {
         padding: 18px;
     }
 
     /* Mobile Link Button Sizing */
-
     .action-link,
     #contact a,
     #location > a {
@@ -970,7 +937,6 @@ footer a:focus {
     }
 
     /* Mobile Homepage Card Height */
-
     .home-grid .home-card {
         height: auto;
     }
@@ -1019,7 +985,8 @@ footer a:focus {
     header,
     footer,
     main section,
-    main article {
+    main article,
+    main aside {
         background-color: #ffffff;
         color: #000000;
         box-shadow: none;
@@ -1045,6 +1012,21 @@ footer a:focus {
     main {
         width: 100%;
         max-width: none;
+    }
+
+    /* Print-Friendly Project Cards */
+    #projects > article.project-card,
+    #projects > aside.cyber-resources {
+        border: 1px solid #999999;
+        border-radius: 0;
+    }
+
+    /* Print-Friendly Text */
+    main p,
+    main li,
+    main figcaption,
+    main h4 {
+        color: #000000;
     }
 }
 
