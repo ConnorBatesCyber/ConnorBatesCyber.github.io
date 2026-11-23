@@ -62,6 +62,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header h2 {
@@ -132,6 +133,31 @@ nav a[aria-current="page"] {
     text-underline-offset: 5px;
 }
 
+/* Website Sound Toggle */
+#sound-toggle {
+    display: block;
+    margin: 10px auto 15px;
+    padding: 8px 16px;
+    background-color: #173b68;
+    color: #ffffff;
+    border: 1px solid #5ba8ff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Sound Toggle Hover */
+#sound-toggle:hover {
+    background-color: #24558d;
+}
+
+/* Sound Toggle Keyboard Focus */
+#sound-toggle:focus-visible {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
 
 /* ==========================================
    4. Main Content and General Cards
@@ -150,6 +176,7 @@ main h3 {
     color: #163e5b;
     line-height: 1.3;
     text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 main h1 {
@@ -469,6 +496,82 @@ main article > .action-link {
     line-height: 1.6;
 }
 
+
+/* Technical Skills Overview Table */
+
+/* Table Container */
+#skills-table .table-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto 40px;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+/* Table Layout */
+#skills-table table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background-color: #173b58;
+    color: #ffffff;
+}
+
+/* Table Caption */
+#skills-table caption {
+    caption-side: top;
+    padding: 12px;
+    color: #9be9f3;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Headers */
+#skills-table thead {
+    background-color: #116b94;
+}
+
+#skills-table th {
+    padding: 14px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #5ba8ff;
+}
+
+/* Table Data Cells */
+#skills-table td {
+    padding: 12px 14px;
+    text-align: left;
+    line-height: 1.5;
+    border: 1px solid #5ba8ff;
+}
+
+/* Alternating Table Rows */
+#skills-table tbody tr:nth-child(even) {
+    background-color: #245779;
+}
+
+/* Table Row Hover */
+#skills-table tbody tr:hover {
+    background-color: #306b91;
+}
+
+/* Mobile Table Scrolling Hint */
+#skills-table .table-scroll-hint {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    #skills-table .table-scroll-hint {
+        display: block;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #9be9f3;
+        margin: 10px auto;
+    }
+}
+
 /* ==========================================
    8. Projects Page
    ========================================== */
@@ -504,6 +607,11 @@ main article > .action-link {
 #projects img {
     max-width: 100%;
     height: auto;
+    transition: opacity 0.3s ease;
+}
+
+#projects a:hover img {
+    opacity: 0.85;
 }
 
 /* Center Projects Page Introduction */
@@ -561,6 +669,68 @@ main article > .action-link {
     margin-right: auto;
     padding-bottom: 4px;
     border-bottom: 2px solid #00aaff;
+}
+
+/* Screenshot Viewing Instructions */
+#projects .image-instructions {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 12px 18px;
+    background-color: #eaf5fc;
+    color: #163e5b;
+    border: 1px solid #1a83ae;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Expandable Screenshot Container */
+#projects figure.expandable-image {
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Clickable Screenshot Link */
+#projects .expandable-image a {
+    display: inline-block;
+    max-width: 100%;
+    cursor: zoom-in;
+}
+
+/* Screenshot Appearance */
+#projects .expandable-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 12px auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Screenshot Hover and Keyboard Focus */
+#projects .expandable-image a:hover img,
+#projects .expandable-image a:focus-visible img {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(26, 131, 174, 0.35);
+}
+
+/* Screenshot Captions */
+#projects .expandable-image figcaption {
+    max-width: 900px;
+    margin: 12px auto;
+    text-align: center;
+    color: #233247;
+}
+
+/* Click to Enlarge Label */
+#projects .expand-hint {
+    display: block;
+    margin-top: 8px;
+    color: #116b94;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 
@@ -788,6 +958,62 @@ input[type="submit"]:hover {
 }
 
 
+/* Contact Form Layout */
+#contact-form-section {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #171b1c;
+    border: 1px solid #304b63;
+    border-radius: 10px;
+}
+
+/* Contact Form Heading and Introduction */
+#contact-form-section h2,
+#contact-form-section > p {
+    text-align: center;
+}
+
+/* Contact Form Field Layout */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Contact Form Labels */
+#contact-form label {
+    color: #b9e9f3;
+    font-weight: bold;
+}
+
+/* Contact Form Input Fields */
+#contact-form input,
+#contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #173b58;
+    color: #ffffff;
+    border: 1px solid #5ba8ff;
+    border-radius: 6px;
+}
+
+/* Contact Form Field Focus */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: 2px solid #00aaff;
+    outline-offset: 2px;
+}
+
+/* Contact Form Submit Button */
+#contact-form button {
+    align-self: center;
+    margin-top: 10px;
+    min-width: 180px;
+}
+
+
 /* ==========================================
    13. Footer
    ========================================== */
@@ -908,10 +1134,11 @@ footer a:focus {
         padding: 5px 4px;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-    }
+/* Responsive Technical Skills Table */
+#skills-table .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
     /* Mobile Visibility */
     .mobile {
@@ -939,6 +1166,16 @@ footer a:focus {
     /* Mobile Homepage Card Height */
     .home-grid .home-card {
         height: auto;
+    }
+
+    /* Mobile Screenshot Spacing */
+    #projects figure.expandable-image {
+        margin: 15px auto;
+    }
+
+    /* Mobile Screenshot Instructions */
+    #projects .image-instructions {
+        padding: 10px 12px;
     }
 }
 
@@ -976,7 +1213,6 @@ footer a:focus {
    ========================================== */
 
 @media print {
-
     body {
         background-color: #ffffff;
         color: #000000;
@@ -992,11 +1228,13 @@ footer a:focus {
         box-shadow: none;
     }
 
+ header h1,
     main h1,
     main h2,
     main h3 {
         color: #000000;
-    }
+        text-shadow: none;
+}
 
     nav,
     .map,
@@ -1028,6 +1266,12 @@ footer a:focus {
     main h4 {
         color: #000000;
     }
+
+    /* Hide Screenshot Instructions When Printing */
+    #projects .expand-hint,
+    #projects .image-instructions {
+        display: none;
+    }
 }
 
 
@@ -1040,4 +1284,22 @@ footer a:focus {
     main {
         max-width: 1150px;
     }
+}
+
+/* ==========================================
+   21. Accessibility
+   ========================================== */
+
+/* Reduce Screenshot Animation for Motion-Sensitive Users */
+@media (prefers-reduced-motion: reduce) {
+
+    #projects .expandable-image img {
+        transition: none;
+    }
+
+    #projects .expandable-image a:hover img,
+    #projects .expandable-image a:focus-visible img {
+        transform: none;
+    }
+
 }
