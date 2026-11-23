@@ -34,6 +34,12 @@
                 <a href="resume.html">Resume</a> &nbsp; &#9475; &nbsp;
                 <a href="contact.html">Contact</a>
             </p>
+
+            <!-- Website Sound Toggle -->
+            <button id="sound-toggle" type="button"
+                aria-pressed="true" aria-label="Turn website sound off">
+                &#128266; Sound On
+            </button>
         </nav>
 
         <main>
@@ -142,6 +148,68 @@
                 </p>
             </div>
 
+            <!-- Technical Skills Table -->
+            <section id="skills-table">
+                <h2>Technical Skills Overview</h2>
+
+            <!-- Mobile Table Scrolling Instructions -->
+            <p class="table-scroll-hint">
+                &#8596; Swipe left or right to view the full table.
+            </p>
+
+                <div class="table-container">
+                    <table>
+                        <caption>Cybersecurity and IT Technical Experience</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Technical Area</th>
+                                <th scope="col">Tools / Technologies</th>
+                                <th scope="col">Practical Application</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Digital Forensics</th>
+                                <td>FTK Imager, HxD, Autopsy</td>
+                                <td>Evidence acquisition, examination, and analysis</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Network Security</th>
+                                <td>Wireshark, Nmap</td>
+                                <td>Network traffic analysis and security scanning</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Virtualization</th>
+                                <td>VMware</td>
+                                <td>Virtual machine configuration and cybersecurity labs</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Programming</th>
+                                <td>Python, Java, MySQL</td>
+                                <td>Programming, database queries, and data analysis</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Security Monitoring</th>
+                                <td>Splunk, Windows Event Viewer</td>
+                                <td>Log examination and security event analysis</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Machine Learning</th>
+                                <td>Python, RapidMiner</td>
+                                <td>Classification models and cybersecurity data analysis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
             <!-- Technical Knowledge Section -->
             <section id="knowledge" class="technical-knowledge">
 
@@ -249,6 +317,15 @@
             </p>
 
             <p>&copy; 2026 Connor Bates | Cybersecurity &amp; CIS Portfolio</p>
-        </footer>
+                </footer>
+
+        <!-- Website Sound Effect -->
+        <audio id="interface-sound" preload="auto">
+            <source src="media/interface_click.mp3" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+        </audio>
+
+        <!-- Website Sound Controls -->
+        <script src="scripts/sound.js" defer></script>
     </body>
 </html>

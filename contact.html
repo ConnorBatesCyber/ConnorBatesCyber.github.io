@@ -34,6 +34,12 @@
                 <a href="resume.html">Resume</a> &nbsp; &#9475; &nbsp;
                 <a href="contact.html" aria-current="page">Contact</a>
             </p>
+
+            <!-- Website Sound Toggle -->
+            <button id="sound-toggle" type="button"
+                aria-pressed="true" aria-label="Turn website sound off">
+                &#128266; Sound On
+            </button>
         </nav>
 
         <main>
@@ -92,6 +98,49 @@
                 </p>
             </div>
 
+            <!-- Contact Form Section -->
+            <section id="contact-form-section">
+                <h2>Send Me a Message</h2>
+
+                <p>
+                    Have a question or professional opportunity?
+                    Fill out the form below to get in touch.
+                </p>
+
+                <form id="contact-form"
+                    action="https://formsubmit.co/connor.j.bates95@gmail.com"
+                    method="POST">
+
+            <!-- Contact Form Email Settings -->
+                <input type="hidden" name="_subject"
+                    value="New Message from My Cybersecurity Portfolio">
+
+                <input type="hidden" name="_template" value="table">
+
+            <!-- Spam Protection -->
+                <input type="text" name="_honey" style="display:none">
+
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name"
+                        name="name" required>
+
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email"
+                        name="email" required>
+
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject"
+                        name="subject" required>
+
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message"
+                            name="message" rows="6"
+                            required></textarea>
+
+                <button type="submit">Send Message</button>
+                </form>
+            </section>
+
             <!-- Location Section -->
             <section id="location">
 
@@ -132,5 +181,14 @@
             </p>
             <p>&copy; 2026 Connor Bates | Cybersecurity &amp; CIS Portfolio</p>
         </footer>
+        
+                <!-- Website Sound Effect -->
+        <audio id="interface-sound" preload="auto">
+            <source src="media/interface_click.mp3" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+        </audio>
+
+        <!-- Website Sound Controls -->
+        <script src="scripts/sound.js" defer></script>
     </body>
 </html>

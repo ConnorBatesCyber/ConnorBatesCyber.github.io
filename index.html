@@ -38,6 +38,12 @@
                 <a href="resume.html">Resume</a> &nbsp; &#9475; &nbsp;
                 <a href="contact.html">Contact</a>
             </p>
+
+            <!-- Website Sound Toggle -->
+            <button id="sound-toggle" type="button"
+                aria-pressed="true" aria-label="Turn website sound off">
+                &#128266; Sound On
+            </button>
         </nav>
 
         <main>
@@ -140,5 +146,13 @@
 
             <p>&copy; 2026 Connor Bates | Cybersecurity &amp; CIS Portfolio</p>
         </footer>
+
+        <!-- Website Sound Effect -->
+        <audio id="interface-sound" preload="auto">
+            <source src="media/interface_click.mp3" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+        </audio>
+        <!-- Website Sound Controls -->
+        <script src="scripts/sound.js" defer></script>
     </body>
 </html>
